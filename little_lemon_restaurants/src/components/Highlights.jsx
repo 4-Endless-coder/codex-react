@@ -2,30 +2,36 @@ import React from 'react'
 
 const Highlights = () => {
   return (
-    <>
     <section id='highlights'>
-        <h2>Specials</h2>
+      <h2>This Week's Specials!</h2>
+      <div className="highlights-grid">
         <article>
-            <img src="src\assets\icons_assets\greek salad.jpg" alt="Greek Salad" />
-            <h3>Greek Salad</h3>
-            <p>Short Descreiption...</p>
-            <a href="">Order Delivery</a>
+          <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400&h=300&fit=crop" alt="Greek Salad" />
+          <div className="article-content">
+            <h3>Greek Salad <span style={{color: '#F4CE14', float: 'right'}}>$12.99</span></h3>
+            <p>The famous Greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.</p>
+            <a href="">Order a Delivery 🏍️</a>
+          </div>
         </article>
         <article>
-            <img src="src\assets\icons_assets\bruchetta.svg" alt="Bruschetta" />
-            <h3>Bruschetta</h3>
-            <p>Short Descreiption...</p>
-            <a href="">Order Delivery</a>
+          <img src="https://images.unsplash.com/photo-1506280754576-f6fa8a873550?w=400&h=300&fit=crop" alt="Bruschetta" />
+          <div className="article-content">
+            <h3>Bruschetta <span style={{color: '#F4CE14', float: 'right'}}>$5.99</span></h3>
+            <p>Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.</p>
+            <a href="">Order a Delivery 🏍️</a>
+          </div>
         </article>
         <article>
-            <img src="src\assets\icons_assets\lemon dessert.jpg" alt="Lemon Desert" />
-            <h3>Lemon Desert</h3>
-            <p>Short Descreiption...</p>
-            <a href="">Order Delivery</a>
+          <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400&h=300&fit=crop" alt="Lemon Dessert" />
+          <div className="article-content">
+            <h3>Lemon Dessert <span style={{color: '#F4CE14', float: 'right'}}>$5.00</span></h3>
+            <p>This comes straight from grandma's recipe book, every last ingredient has been sourced and is as authentic as can be imagined.</p>
+            <a href="">Order a Delivery 🏍️</a>
+          </div>
         </article>
-        <button>Online Menu</button>
+      </div>
+      <button>Online Menu</button>
     </section>
-    </>
   )
 }
 

@@ -2,26 +2,29 @@ import React from 'react'
 
 const Testimonial = () => {
   return (
-    <>
     <section id='testimonial'>
-        <h2>Testimonials</h2>
+      <h2>What Our Customers Say</h2>
+      <div className="testimonial-grid">
         <article>
-            <p>⭐⭐⭐⭐⭐</p>
-            <img src="src\assets\User1.jpg" alt="user1" />
-            <p>User Reveiw here...</p>
+          <div className="stars">⭐⭐⭐⭐⭐</div>
+          <img src="src\assets\User2.jpg" alt="Sarah Johnson" />
+          <h4>Sarah Johnson</h4>
+          <p>"Amazing food and wonderful atmosphere! The Greek salad was fresh and delicious. Definitely coming back!"</p>
         </article>
         <article>
-            <p>⭐⭐⭐⭐</p>
-            <img src="src\assets\User2.jpg" alt="user2" />
-            <p>User Reveiw here...</p>
+          <div className="stars">⭐⭐⭐⭐⭐</div>
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" alt="Mike Chen" />
+          <h4>Mike Chen</h4>
+          <p>"Best Mediterranean restaurant in Chicago! The lemon dessert is absolutely incredible. Highly recommended!"</p>
         </article>
         <article>
-            <p>⭐⭐⭐⭐⭐</p>
-            <img src="src\assets\User3.jpg" alt="user3" />
-            <p>User Reveiw here...</p>
+          <div className="stars">⭐⭐⭐⭐⭐</div>
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face" alt="Emma Davis" />
+          <h4>Emma Davis</h4>
+          <p>"Family-owned gem with authentic flavors. The bruschetta was perfectly prepared and the service was outstanding!"</p>
         </article>
+      </div>
     </section>
-    </>
   )
 }
 
