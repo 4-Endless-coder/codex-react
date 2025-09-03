@@ -5,7 +5,7 @@ const Footer = () => {
     <>
       <footer>
         <section>
-          <img src="" alt="Little Lemon Logo" />
+          <img src="src\assets\icons_assets\Logo.svg" alt="Little Lemon Logo" />
         </section>
         <section>
           <h3>Doormat Navigation</h3>

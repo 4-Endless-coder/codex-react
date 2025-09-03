@@ -4,7 +4,7 @@ const Nav = () => {
   return (
     <>
     <nav>
-      <img src="logo.png" alt="Little Lemon Logo" />
+      <img src="src\assets\icons_assets\Logo.svg" alt="Little Lemon Logo" />
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
