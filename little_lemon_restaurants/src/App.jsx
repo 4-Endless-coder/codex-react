@@ -6,6 +6,7 @@ import Highlights from "./components/Highlights";
 import Testimonial from "./components/Testimonial";
 import About from "./components/About";
 import Footer from "./components/Footer";
+import BookingPage from "./components/BookingPage";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
               </>
             }
           />
+          <Route path="/reservations" element={<BookingPage />} />
         </Routes>
       </main>
       <Footer />
