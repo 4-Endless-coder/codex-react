@@ -435,6 +435,77 @@ footer p {
   margin-bottom: var(--spacing-xs);
 }
 
+/* Booking Form Modern Styles */
+.booking-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 60vh;
+  background: var(--highlight-light);
+  padding: var(--spacing-lg) 0;
+}
+
+.booking-form {
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(73, 94, 87, 0.08);
+  padding: var(--spacing-xl);
+  max-width: 400px;
+  width: 100%;
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+.booking-form label {
+  font-weight: 600;
+  color: var(--primary-green);
+  margin-bottom: 0.25rem;
+}
+
+.booking-form input[type="date"],
+.booking-form input[type="number"],
+.booking-form select {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--primary-green);
+  font-size: 1rem;
+  background: var(--highlight-light);
+  color: var(--highlight-dark);
+  margin-bottom: 0.5rem;
+  transition: border-color 0.2s;
+}
+
+.booking-form input[type="date"]:focus,
+.booking-form input[type="number"]:focus,
+.booking-form select:focus {
+  border-color: var(--primary-yellow);
+  outline: none;
+}
+
+.booking-form input[type="submit"] {
+  background: var(--primary-yellow);
+  color: var(--primary-green);
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 0.9rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.booking-form input[type="submit"]:hover {
+  background: var(--primary-green);
+  color: var(--white);
+}
+
+@media (max-width: 600px) {
+  .booking-form {
+    padding: var(--spacing-md);
+    max-width: 100%;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 480px) {
   :root {
@@ -457,6 +528,40 @@ footer p {
   #hero {
     padding: var(--spacing-lg) var(--spacing-sm);
   }
+}
+
+/* Reservation Popup Styles */
+.reservation-popup {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary-yellow);
+  color: var(--primary-green);
+  padding: 1.5rem 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(73, 94, 87, 0.18);
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  z-index: 9999;
+  animation: popupFadeIn 0.5s;
+  font-size: 1.1rem;
+}
+
+.popup-icon {
+  font-size: 2.5rem;
+  animation: popupBounce 1s infinite alternate;
+}
+
+@keyframes popupFadeIn {
+  from { opacity: 0; transform: translate(-50%, -20px);}
+  to { opacity: 1; transform: translate(-50%, 0);}
+}
+
+@keyframes popupBounce {
+  from { transform: scale(1);}
+  to { transform: scale(1.15);}
 }
 
 /* Utility Classes */
