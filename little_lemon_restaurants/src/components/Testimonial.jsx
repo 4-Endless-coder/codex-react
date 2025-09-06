@@ -12,7 +12,7 @@ const Testimonial = () => {
           <p>"Amazing food and wonderful atmosphere! The Greek salad was fresh and delicious. Definitely coming back!"</p>
         </article>
         <article>
-          <div className="stars">⭐⭐⭐⭐⭐</div>
+          <div className="stars">⭐⭐⭐⭐</div>
           <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" alt="Mike Chen" />
           <h4>Mike Chen</h4>
           <p>"Best Mediterranean restaurant in Chicago! The lemon dessert is absolutely incredible. Highly recommended!"</p>
