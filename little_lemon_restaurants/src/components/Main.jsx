@@ -1,13 +1,14 @@
 // src/components/Main.jsx
-import React, { useReducer } from "react";
+import React, { useReducer, useState } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import Hero from "./Hero";
 import Highlights from "./Highlights";
 import Testimonial from "./Testimonial";
 import About from "./About";
 import BookingPage from "./BookingPage";
-import ConfirmedBooking from "./ConfirmedBooking"; // Import the new component
-import { fetchAPI, submitAPI } from './api';
+import ConfirmedBooking from "./ConfirmedBooking";
+import BookingsTable from "./BookingsTable";
+import { fetchAPI, submitAPI } from '../../api';
 
 export const updateTimes = (state, action) => {
   if (action.type === 'date') {
@@ -22,13 +23,15 @@ export const initializeTimes = () => {
 
 const Main = () => {
   const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes());
-  const navigate = useNavigate(); // Hook for navigation
+  const [bookings, setBookings] = useState([]); // State for all bookings
+  const navigate = useNavigate();
 
-  // Function to submit the form data
   const submitForm = (formData) => {
     const success = submitAPI(formData);
     if (success) {
-      navigate("/confirmed-booking"); // Navigate on success
+      // Add the new booking to the state
+      setBookings([...bookings, formData]);
+      navigate("/confirmed-booking");
     }
     return success;
   };
@@ -36,29 +39,24 @@ const Main = () => {
   return (
     <main>
       <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Hero />
-              <Highlights />
-              <Testimonial />
-              <About />
-            </>
-          }
+        <Route path="/" element={<>
+            <Hero />
+            <Highlights />
+            <Testimonial />
+            <About />
+          </>}
         />
-        <Route
-          path="/reservations"
-          element={
+        <Route path="/reservations" element={
             <BookingPage
               availableTimes={availableTimes}
               dispatch={dispatch}
-              submitForm={submitForm} // Pass the function down
+              submitForm={submitForm}
             />
           }
         />
-        {/* Add the route for the confirmation page */}
         <Route path="/confirmed-booking" element={<ConfirmedBooking />} />
+        {/* This route now correctly receives the bookings state */}
+        <Route path="/bookings" element={<BookingsTable bookings={bookings} />} />
       </Routes>
     </main>
   );

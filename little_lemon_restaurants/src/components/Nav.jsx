@@ -10,8 +10,7 @@ const Nav = () => {
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>
           <li><Link to="/menu">Menu</Link></li>
-          {/* Changed this link to point to all bookings */}
-          <li><Link to="/bookings">All Bookings</Link></li>
+          <li><Link to="/bookings">Reservations</Link></li>
           <li><Link to="/order">Order Online</Link></li>
           <li><Link to="/login">Login</Link></li>
         </ul>
