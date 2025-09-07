@@ -1,5 +1,5 @@
 // src/components/Main.jsx
-import React, { useReducer, useState } from "react";
+import React, { useReducer, useState, useEffect } from "react"; // Import useEffect
 import { Routes, Route, useNavigate } from "react-router-dom";
 import Hero from "./Hero";
 import Highlights from "./Highlights";
@@ -23,13 +23,23 @@ export const initializeTimes = () => {
 
 const Main = () => {
   const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes());
-  const [bookings, setBookings] = useState([]); // State for all bookings
+
+  // Initialize bookings state from local storage
+  const [bookings, setBookings] = useState(() => {
+    const savedBookings = localStorage.getItem('bookings');
+    return savedBookings ? JSON.parse(savedBookings) : [];
+  });
+
   const navigate = useNavigate();
+
+  // Save bookings to local storage whenever they change
+  useEffect(() => {
+    localStorage.setItem('bookings', JSON.stringify(bookings));
+  }, [bookings]);
 
   const submitForm = (formData) => {
     const success = submitAPI(formData);
     if (success) {
-      // Add the new booking to the state
       setBookings([...bookings, formData]);
       navigate("/confirmed-booking");
     }
@@ -55,7 +65,6 @@ const Main = () => {
           }
         />
         <Route path="/confirmed-booking" element={<ConfirmedBooking />} />
-        {/* This route now correctly receives the bookings state */}
         <Route path="/bookings" element={<BookingsTable bookings={bookings} />} />
       </Routes>
     </main>
