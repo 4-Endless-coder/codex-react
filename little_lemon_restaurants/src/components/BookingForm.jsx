@@ -1,16 +1,15 @@
 import React, { useState } from "react";
 
-const BookingForm = ({ availableTimes, dispatch }) => {
+const BookingForm = ({ availableTimes, dispatch, submitForm }) => { // Receive submitForm prop
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [guests, setGuests] = useState(1);
   const [occasion, setOccasion] = useState("Birthday");
-  const [showPopup, setShowPopup] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setShowPopup(true);
-    setTimeout(() => setShowPopup(false), 2500); // Hide after 2.5s
+    const formData = { date, time, guests, occasion };
+    submitForm(formData); // Call the passed submitForm function
   };
 
   const handleDateChange = (e) => {
@@ -73,15 +72,6 @@ const BookingForm = ({ availableTimes, dispatch }) => {
 
         <input type="submit" value="Make Your reservation" />
       </form>
-      {showPopup && (
-        <div className="reservation-popup">
-          <span role="img" aria-label="success" className="popup-icon">🎉</span>
-          <div>
-            <strong>Reservation Submitted!</strong>
-            <p>Your table is booked. We look forward to seeing you!</p>
-          </div>
-        </div>
-      )}
     </>
   );
 };

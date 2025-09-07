@@ -1,32 +1,37 @@
 // src/components/Main.jsx
 import React, { useReducer } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import Hero from "./Hero";
 import Highlights from "./Highlights";
 import Testimonial from "./Testimonial";
 import About from "./About";
 import BookingPage from "./BookingPage";
-
-// Use fetchData from the API script loaded in index.html
-const fetchData = window.fetchData || function(date) {
-  // fallback for testing
-  return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
-};
-
-export const initializeTimes = () => {
-  const today = new Date();
-  return fetchData(today);
-};
+import ConfirmedBooking from "./ConfirmedBooking"; // Import the new component
+import { fetchAPI, submitAPI } from './api';
 
 export const updateTimes = (state, action) => {
-  if (action.type === "date") {
-    return fetchData(new Date(action.date));
+  if (action.type === 'date') {
+    return fetchAPI(new Date(action.date));
   }
   return state;
 };
 
+export const initializeTimes = () => {
+  return fetchAPI(new Date());
+};
+
 const Main = () => {
   const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes());
+  const navigate = useNavigate(); // Hook for navigation
+
+  // Function to submit the form data
+  const submitForm = (formData) => {
+    const success = submitAPI(formData);
+    if (success) {
+      navigate("/confirmed-booking"); // Navigate on success
+    }
+    return success;
+  };
 
   return (
     <main>
@@ -45,9 +50,15 @@ const Main = () => {
         <Route
           path="/reservations"
           element={
-            <BookingPage availableTimes={availableTimes} dispatch={dispatch} />
+            <BookingPage
+              availableTimes={availableTimes}
+              dispatch={dispatch}
+              submitForm={submitForm} // Pass the function down
+            />
           }
         />
+        {/* Add the route for the confirmation page */}
+        <Route path="/confirmed-booking" element={<ConfirmedBooking />} />
       </Routes>
     </main>
   );
