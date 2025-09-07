@@ -7,21 +7,22 @@ import Testimonial from "./Testimonial";
 import About from "./About";
 import BookingPage from "./BookingPage";
 
-const updateTimes = (state, action) => {
-  // action = { type: 'date', date: 'YYYY-MM-DD' }
-  if (!action) return state;
-
-  switch (action.type) {
-    case "date":
-      // For now return fixed slots — replace with real logic if needed
-      return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
-    default:
-      return state;
-  }
+// Use fetchData from the API script loaded in index.html
+const fetchData = window.fetchData || function(date) {
+  // fallback for testing
+  return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
 };
 
-const initializeTimes = () => {
-  return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+export const initializeTimes = () => {
+  const today = new Date();
+  return fetchData(today);
+};
+
+export const updateTimes = (state, action) => {
+  if (action.type === "date") {
+    return fetchData(new Date(action.date));
+  }
+  return state;
 };
 
 const Main = () => {
