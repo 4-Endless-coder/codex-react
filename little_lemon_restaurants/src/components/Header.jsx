@@ -3,12 +3,9 @@ import Nav from './Nav'
 
 const Header = () => {
   return (
-  <>
-     {/* Header Section */}
-  <header>
-    <Nav />
-  </header>
-  </>
+    <header>
+      <Nav />
+    </header>
   )
 }
 

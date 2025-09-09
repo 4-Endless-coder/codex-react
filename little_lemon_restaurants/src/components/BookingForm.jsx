@@ -1,4 +1,3 @@
-// src/components/BookingForm.jsx
 import React, { useState } from "react";
 
 const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
@@ -28,7 +27,6 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
 
   return (
     <form className="booking-form" onSubmit={handleSubmit}>
-      {/* The `htmlFor` attribute links the label to the input, improving screen reader support. */}
       <label htmlFor="res-date">Choose date</label>
       <input
         type="date"
@@ -75,7 +73,6 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
         <option>Other</option>
       </select>
 
-      {/* Added the aria-label as requested */}
       <input
         type="submit"
         value="Make Your reservation"
