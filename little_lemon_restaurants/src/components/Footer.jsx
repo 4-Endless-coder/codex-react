@@ -5,7 +5,7 @@ const Footer = () => {
     <footer>
       <div className="footer-content">
         <section>
-          <img src="src/assets/icons_assets/Logo.svg" alt="Little Lemon Logo" />
+          <img src="src\assets\icons_assets\Logo.svg" alt="Little Lemon Logo" />
           <p>Family-owned Mediterranean restaurant serving authentic dishes with a modern twist.</p>
         </section>
         <section>

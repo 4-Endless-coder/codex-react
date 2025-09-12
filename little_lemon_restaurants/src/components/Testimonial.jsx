@@ -7,7 +7,7 @@ const Testimonial = () => {
       <div className="testimonial-grid">
         <article>
           <div className="stars">⭐⭐⭐⭐⭐</div>
-          <img src="src\assets\User2.jpg" alt="Sarah Johnson" />
+          <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sarah Johnson" />
           <h4>Sarah Johnson</h4>
           <p>"Amazing food and wonderful atmosphere! The Greek salad was fresh and delicious. Definitely coming back!"</p>
         </article>

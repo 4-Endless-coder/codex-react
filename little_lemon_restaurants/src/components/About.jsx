@@ -12,7 +12,7 @@ const About = () => {
         </p>
         <div className="about-images">
           <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=300&h=200&fit=crop" alt="Chef Adrian" />
-          <img src="src/assets/icons_assets/Mario and Adrian A.jpg" alt="Chef Mario" />
+          <img src="https://plus.unsplash.com/premium_photo-1734437069907-bd6649ef017b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Chef Mario" />
         </div>
       </div>
     </section>
