@@ -8,7 +8,8 @@ import About from "./About";
 import BookingPage from "./BookingPage";
 import ConfirmedBooking from "./ConfirmedBooking";
 import BookingsTable from "./BookingsTable";
-import { fetchAPI, submitAPI } from '../../api';
+import { fetchAPI, submitAPI } from '/api.js';
+
 
 export const updateTimes = (state, action) => {
   if (action.type === 'date') {
