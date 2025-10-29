@@ -1,12 +1,65 @@
-# React + Vite
+# File Tree: little_lemon_restaurants
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Root Path:** `c:\Users\ashes\Desktop\React Projects\codex-react\little_lemon_restaurants`
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+├── 📁 src
+│   ├── 📁 assets
+│   │   ├── 📁 icons_assets
+│   │   │   ├── 🖼️ 1_ji5jV-KoRbEFScZQUPYyGg.png
+│   │   │   ├── 🖼️ Basket.svg
+│   │   │   ├── 🖼️ Dish icon.svg
+│   │   │   ├── 🖼️ Logo.svg
+│   │   │   ├── 🖼️ Mario and Adrian A.jpg
+│   │   │   ├── 🖼️ Mario and Adrian b.jpg
+│   │   │   ├── 🖼️ Recent.svg
+│   │   │   ├── 🖼️ Ui kit (1).png
+│   │   │   ├── 🖼️ Ui kit.svg
+│   │   │   ├── 🖼️ basket .svg
+│   │   │   ├── 🖼️ bruchetta.svg
+│   │   │   ├── 🖼️ creditcard.svg
+│   │   │   ├── 🖼️ greek salad.jpg
+│   │   │   ├── 🖼️ home icon.svg
+│   │   │   ├── 🖼️ lemon dessert.jpg
+│   │   │   ├── 🖼️ restauranfood.jpg
+│   │   │   ├── 🖼️ restaurant chef B.jpg
+│   │   │   ├── 🖼️ restaurant.jpg
+│   │   │   ├── 🖼️ 🦆 icon _eye_.svg
+│   │   │   └── 🖼️ 🦆 icon _hamburger menu.svg
+│   │   ├── 🖼️ User1.jpg
+│   │   ├── 🖼️ User2.jpg
+│   │   ├── 🖼️ User3.jpg
+│   │   ├── 🖼️ esref-yasa-MOQ-CUuED8w-unsplash.jpg
+│   │   └── 🖼️ joseph-gonzalez-iFgRcqHznqg-unsplash.jpg
+│   ├── 📁 components
+│   │   ├── 📄 About.jsx
+│   │   ├── 📄 BookingForm.jsx
+│   │   ├── 📄 BookingForm.test.jsx
+│   │   ├── 📄 BookingPage.jsx
+│   │   ├── 📄 BookingsTable.jsx
+│   │   ├── 📄 ConfirmedBooking.jsx
+│   │   ├── 📄 Footer.jsx
+│   │   ├── 📄 Header.jsx
+│   │   ├── 📄 Hero.jsx
+│   │   ├── 📄 Highlights.jsx
+│   │   ├── 📄 Main.jsx
+│   │   ├── 📄 Main.localStorage.test.jsx
+│   │   ├── 📄 Main.test.jsx
+│   │   ├── 📄 Nav.jsx
+│   │   └── 📄 Testimonial.jsx
+│   ├── 🎨 App.css
+│   ├── 📄 App.jsx
+│   ├── 🎨 index.css
+│   └── 📄 main.jsx
+├── ⚙️ .gitignore
+├── 📝 README.md
+├── 📄 api.js
+├── 📄 babel.config.cjs
+├── 📄 eslint.config.js
+├── 🌐 index.html
+├── 📄 jest.config.cjs
+├── 📄 jest.setup.js
+├── ⚙️ package-lock.json
+├── ⚙️ package.json
+└── 📄 vite.config.js
+```
